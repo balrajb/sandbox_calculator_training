@@ -5,7 +5,7 @@
 		that = this;
 		this.input1 = null;
 		this.input2 = null;
-		this.operator = null
+		this.operator = null;
 		that.display = 0;
 		that.init(el);
 	};
@@ -72,13 +72,13 @@
 				}
 				that.displayScreen();
 			});
-		},
-	}
+		}
+	};
 }());
 
 $(document).ready(function () {
 
 	//----- created new object-----//
 	var $el =$('#calculator');
-	 Calc = new Calculator($el);
+	Calc =	new Calculator($el);
 });
