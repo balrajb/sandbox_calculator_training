@@ -29,9 +29,11 @@
 				that.display = 0;
 			} else if(input === 'backspace') {
 				that.display = $('input', '.display').val().slice(0,-1);
-				if ($('input', '.display').val() === '') {
-					that.display = 0;
-				}
+			} else {
+				that.display = $('input', '.display').val() + input;
+			}
+			if ($('input', '.display').val() === '') {
+				that.display = 0;
 			}
 			that.displayScreen();
 		},
@@ -67,10 +69,10 @@
 
 		init:function (el) {
 			$('button', el).click(function () {
-				if ($('button').val != '=') {
-				that.updateDisplayInput(this.value);
+				if (this.value != '=') {
+					that.updateDisplayInput(this.value);
 				}
-				that.displayScreen();
+					that.displayScreen();
 			});
 		}
 	};
